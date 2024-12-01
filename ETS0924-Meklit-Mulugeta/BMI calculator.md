@@ -46,26 +46,27 @@
 
 ``` mermaid
 flowchart TD
-    A[Start] --> B[Declare variables: weight, height, bodyMassIndex, gender, continueInput]
-    B --> C[While loop: 1 > 0]
-    C --> D[Input weight in kg]
-    D --> E[Input height in meters]
-    E --> F[Input gender ]
-    F --> G[Check for valid input]
-    G -->|Valid| H[Calculate BMI]
-    H --> I[Display BMI and gender]
-    I --> J[Determine weight level based on BMI and gender]
+    A((START)) --> B[DECLARE variables: weight, height, bodyMassIndex, gender, continueInput]
+    B --> C[WHILE loop: 1 > 0]
+    C --> D[/Input weight in kg/]
+    D --> E[/Input height in meters/]
+    E --> F[/Input gender/]
+    F --> G[CHECK for valid input]
     
-    J -->|BMI >= 30| K[Display You are obese. Consult a Doctor.]
-    J -->|Gender M and BMI < 20.5| L[Display You are underweight. Eat a balanced diet.]
-    J -->|Gender M and 20.5 <= BMI < 26| M[Display You have a normal weight. Keep it up!]
-    J -->|Gender M and 26 <= BMI < 30| N[Display You are overweight. Exercise.]
-    J -->|Gender F and BMI < 18.5| O[Display You are underweight. Eat a balanced diet.]
-    J -->|Gender F and 18.5 <= BMI < 24| P[Display You have a normal weight. Keep it up!]
-    J -->|Gender F and 24 <= BMI < 30| Q[Display You are overweight. Exercise.]
-    J -->|Invalid Gender| R[Display Invalid gender]
+    G -->|Valid| H[CALCULATE BMI]
+    H --> I[DISPLAY BMI and gender]
+    I --> J[DETERMINE weight level based on BMI and gender]
     
-    K --> S[Ask if user wants to continue]
+    J -->|BMI >= 30| K[/Display You are obese. Consult a Doctor./]
+    J -->|Gender M and BMI < 20.5| L[/Display You are underweight. Eat a balanced diet./]
+    J -->|Gender M and 20.5 <= BMI < 26| M[/Display You have a normal weight. Keep it up!/]
+    J -->|Gender M and 26 <= BMI < 30| N[/Display You are overweight. Exercise./]
+    J -->|Gender F and BMI < 18.5| O[/Display You are underweight. Eat a balanced diet./]
+    J -->|Gender F and 18.5 <= BMI < 24| P[/Display You have a normal weight. Keep it up!/]
+    J -->|Gender F and 24 <= BMI < 30| Q[/Display You are overweight. Exercise./]
+    J -->|Invalid Gender| R[/Display Invalid gender/]
+    
+    K --> S[ASK if user wants to continue]
     L --> S
     M --> S
     N --> S
@@ -74,6 +75,6 @@ flowchart TD
     Q --> S
     R --> S
     
-    S --> T[Input continueInput]
-    T -->|continueInput == 0| U[End]
-    T -->|continueInput != 0| C
+    S --> T[/Input continueInput/]
+    T -->|continueInput == 0| U((END))
+    
