@@ -20,8 +20,8 @@ flowchart TD
     C --> D[Read fileSize]
     D --> E[Calculate timeInSeconds = fileSize / transmissionRate]
     E --> F[Calculate days = timeInSeconds / 86400]
-    F --> G[Calculate hours = (timeInSeconds % 86400) / 3600]
-    G --> H[Calculate minutes = (timeInSeconds % 3600) / 60]
-    H --> I[Calculate seconds = timeInSeconds % 60]
+    F --> G[Calculate hours = timeInSeconds * 86400 / 3600]
+    G --> H[Calculate minutes = timeInSeconds * 360 / 60]
+    H --> I[Calculate seconds = timeInSeconds * 60]
     I --> J[/Print time in days, hours, minutes, and seconds/]
     J --> K((END))
