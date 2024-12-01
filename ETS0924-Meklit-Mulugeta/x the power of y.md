@@ -15,11 +15,11 @@
 ## flowchar 
 ``` mermaid
 flowchart TD
-    A[START] --> B[DECLARE x, y, result ]
-    B --> C[Print Enter the value of x:]
+    A((START)) --> B[DECLARE x, y, result AS double]
+    B --> C[/Enter the value of x:/]
     C --> D[Read x]
-    D --> E[Print Enter the value of y:]
+    D --> E[/Enter the value of y:/]
     E --> F[Read y]
     F --> G[Calculate result = x^y]
-    G --> H[Print result]
-    H --> I[END]
+    G --> H[/Print result/]
+    H --> I((END))
