@@ -23,18 +23,18 @@ print employeeName, grossSalary, netSalary, bonusPayment
 ## flowchart
 ``` mermaid
 flowchart TD
-    A[Start] --> B[Declare variables: employeeName, weeklyHours, bonusRate, baseSalary, grossSalary, netSalary, bonusPayment]
-    B --> C[Initialize constants: pensionRate, taxRate]
-    C --> D[Print Enter employee name]
+    A((START)) --> B[DECLARE variables: employeeName, weeklyHours, bonusRate, baseSalary, grossSalary, netSalary, bonusPayment]
+    B --> C[INITIALIZE constants: pensionRate, taxRate]
+    C --> D[/Enter employee name/]
     D --> E[Read employeeName]
-    E --> F[Print Enter weekly working hours:]
+    E --> F[/Enter weekly working hours:/]
     F --> G[Read weeklyHours]
-    G --> H[Print Enter bonus rate per hour:]
+    G --> H[/Enter bonus rate per hour:/]
     H --> I[Read bonusRate]
-    I --> J[Print Enter base salary:]
+    I --> J[/Enter base salary:/]
     J --> K[Read baseSalary]
     K --> L[Calculate bonusPayment = weeklyHours * bonusRate]
     L --> M[Calculate grossSalary = baseSalary + bonusPayment]
     M --> N[Calculate netSalary = grossSalary - grossSalary * pensionRate - grossSalary * taxRate]
-    N --> O[Print employeeName, grossSalary, netSalary, bonusPayment]
-    O --> P[End]
+    N --> O[/Print employeeName, grossSalary, netSalary, bonusPayment/]
+    O --> P((END))
