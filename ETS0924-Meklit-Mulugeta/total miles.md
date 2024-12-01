@@ -15,11 +15,11 @@
 ## flowchar
 ``` mermaid
 flowchart TD
-    A[START] --> B[DECLARE capacity, milesPerGallon, totalMiles ]
-    B --> C[Print Enter the capacity of the fuel tank in gallons:]
+    A((START)) --> B[DECLARE capacity, milesPerGallon, totalMiles]
+    B --> C[/Enter the capacity of the fuel tank in gallons:/]
     C --> D[Read capacity]
-    D --> E[Print Enter the miles per gallon the automobile can drive:]
+    D --> E[/Enter the miles per gallon the automobile can drive:/]
     E --> F[Read milesPerGallon]
     F --> G[Calculate totalMiles = capacity * milesPerGallon]
-    G --> H[Print totalMiles]
-    H --> I[END]
+    G --> H[/Print totalMiles/]
+    H --> I((END))
