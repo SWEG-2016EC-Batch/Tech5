@@ -82,5 +82,30 @@ step 12. **print Results**
    net salary
     
 step 13. **End**
+# Flow chart
+```mermaid
+graph TD
+    A([Start Program]) --> B[/"Please enter your name"/]
+    B --> C[/Input employeeName/]
+    C --> D[/"Enter your weekly working hours"/]
+    D --> E[/Input weeklyhours/]
+    E --> F[/"Enter your base salary"/]
+    F --> G[/Input basesalary/]
+    G --> H[/"Enter your bonus rate"/]
+    H --> I[/Input bonusrate/]
+    I --> J["Calculate bonusPayment = bonusrate * weeklyhours"]
+    J --> K["Calculate grossSalary = basesalary + bonusPayment"]
+    K --> L["Calculate pension = grossSalary * 0.05"]
+    L --> M["Calculate tax = grossSalary * 0.15"]
+    M --> N["Calculate netSalary = grossSalary - (tax + pension)"]
+    N --> O[/"Print 'Employee name: ' + employeeName"/]
+    O --> P[/"Print 'Bonus payment: ' + bonusPayment"/]
+    P --> Q[/"Print 'Gross salary: ' + grossSalary"/]
+    Q --> R[/"Print 'Pension deduction: ' + pension"/]
+    R --> S[/"Print 'Tax deduction: ' + tax"/]
+    S --> T[/"Print 'Your net salary is: ' + netSalary"/]
+    T --> U([End])
+
+```
 
 
