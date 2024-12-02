@@ -15,13 +15,13 @@ step1: **Start**
    
 step2: . **Initialize Variables**
    
-   - Declare `int milesPerGallon`
+   - Declare `int miles Per Gallon`
    - Declare `int tankCapacity`
    - Declare `int mileDriven`
 step3: **Input Tank Capacity, Miles Per Gallon**
    
 step4:**Calculate Distance**
-     `mileDriven = tankCapacity * milesPerGallon`
+     `mile Driven = tankCapacity * milesPerGallon`
     
 step5: **Print Distance**
     
