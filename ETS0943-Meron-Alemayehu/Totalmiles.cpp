@@ -3,25 +3,29 @@ using namespace std;
 
 int main()
 {
-  long fileSize;
-  const int transmissionRate = 960; // characters per second
-  float timeInSeconds;
+  float capacity, milesPerGallon, totalMiles;
 
-  cout << "Enter file size in bytes: ";
-  cin >> fileSize;
+  // Prompt user for input
+  cout << "Enter the capacity of the fuel tank in gallons: ";
+  cin >> capacity;
   if (cin.fail())
   {
-    cerr << "Invalid input for file size." << endl; // Output error message
-    return 1;                                       // Exit the program with an error status
+    cerr << "invalid input for capacity" << endl;
+    return 1;
+  }
+  cout << "Enter the miles per gallon the automobile can drive: ";
+  cin >> milesPerGallon;
+  if (cin.fail())
+  {
+    cerr << "invalid input for miles per gallon" << endl;
+    return 1;
   }
 
-  timeInSeconds = static_cast<float>(fileSize) / transmissionRate;
+  // Calculate total miles
+  totalMiles = capacity * milesPerGallon;
 
-  int hours = timeInSeconds / 3600;
-  int minutes = (timeInSeconds - (hours * 3600)) / 60;
-  int seconds = timeInSeconds - (hours * 3600 + minutes * 60);
-
-  cout << "Time taken to send the file: " << hours << " hours " << minutes << " minutes " << seconds << " seconds." << endl;
+  // Output the result
+  cout << "The automobile can be driven for " << totalMiles << " miles without refueling." << endl;
 
   return 0;
 }
