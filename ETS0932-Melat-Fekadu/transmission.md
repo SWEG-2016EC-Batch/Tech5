@@ -13,14 +13,14 @@
  
 3. **Initialize Variables**
    
-   - Declare `double filesizeBytes`
-   - Declare `double transmissionTime`
-   - Declare `const double transmissionRate = 960`
+   - Declare `double filesize Bytes`
+   - Declare `double transmission Time`
+   - Declare `const double transmission Rate = 960`
 5. **Input File Size**
    
 7. **Calculate Transmission Time**
    
-   - Compute `transmissionTime = filesizeBytes / transmissionRate`
+   - Compute transmission Time = filesize Bytes / transmissio nRate`
 9. **Print Transmission Time**
     
 11. **End**
