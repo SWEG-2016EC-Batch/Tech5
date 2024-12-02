@@ -2,7 +2,8 @@
 
 ## Constants
 - `transmission_rate_per_second = 960` (bytes per second)
-
+## double
+- file size, minutes, hours, seconds
 ## Input
 - Prompt the user to enter the file size in bytes.
 - Store the input in `file_size`.
