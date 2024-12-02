@@ -30,3 +30,13 @@ Calculate the result using the formula: result = pow(x, y).
   
 13. **End**
 
+14. ```mermaid
+    graph TD
+    id1([Start]) --> id2[/Please enter the value of x/]
+    id2 --> id3[/Please enter the value of y/]
+    id3 --> id4[Calculate x raised to the power y using the pow function and store it in result]
+    id4 --> id5[/Display the result/]
+    id5 --> id6([End])
+
+    ```
+
