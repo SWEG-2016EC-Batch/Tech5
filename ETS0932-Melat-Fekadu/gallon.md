@@ -4,7 +4,7 @@
 •	Miles per gallon (milesPerGallon)
 
 ## Process
-      Calculate mileDriven as tankCapacity * milesPerGallon.
+      calculate distance as tank Capacity * miles Per Gallon.
 ## Output
 
 •	The distance that can be driven without refueling (mileDriven).
