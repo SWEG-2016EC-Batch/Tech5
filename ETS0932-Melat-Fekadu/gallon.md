@@ -26,3 +26,16 @@ step4:**Calculate Distance**
 step5: **Print Distance**
     
 step6: **End**
+
+```mermaid
+graph TD
+    A([Start Program]) --> B[/"Please enter the capacity of the tank"/]
+    B --> C[/Input tankCapacity/]
+    C --> D[/"Please enter the miles per gallon"/]
+    D --> E[/Input milesPerGallon/]
+    E --> F["Calculate mileDriven = tankCapacity * milesPerGallon"]
+    F --> G[/Display "You can drive " + mileDriven + " miles without refueling."/]
+    G --> H([End])
+
+
+```
