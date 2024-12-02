@@ -32,18 +32,18 @@ step 1. **Start**
 
 step 2. **Initialize Variables**
 
-   - Declare `string employeeName`
-   - Declare `float weeklyhours`
-   - Declare `float bonusrate`
-   - Declare `float basesalary`
-   - Declare `float pension`
-   - Declare `float tax`
-   - Declare `float grossSalary`
-   - Declare `float bonusPayment`
-   - Declare `float netSalary`
-   - Declare `const float pension_rate = 0.05`
-   - Declare `const float tax_rate = 0.15`
-   - 
+    Declare string employee
+     Declare float weeklyhours
+    Declare `float bonusrate`
+    Declare `float basesalary`
+    Declare `float pension`
+    Declare `float tax`
+    Declare `float grossSalary`
+    Declare `float bonusPayment`
+    Declare `float netSalary`
+    Declare `const float pension_rate = 0.05`
+    Declare `const float tax_rate = 0.15`
+
 step 3. **Input Employee Name**
 
 step 4. **Input Weekly Working Hours**
@@ -54,27 +54,32 @@ step 6. **Input Bonus Rate**
 
 step 7. **Calculate Bonus Payment**
 
- Compute `bonusPayment = bonusrate * weeklyhours`
+ Compute bonusPayment = bonusrate * weeklyhours`
+ 
 step 8. **Calculate Gross Salary**
 
-   - Compute `grossSalary = basesalary + bonusPayment`
+   - Compute gross Salary = base salary + bonus Payment`
+     
 step 9. **Calculate Pension**
 
-   - Compute `pension = grossSalary * pension_rate`
+   - Compute pension = gross Salary * pension rate`
+     
 step 10. **Calculate Tax**
-      Compute `tax = grossSalary * tax_rate`
+   Compute tax = gross Salary * tax rate
+     
 step 11. **Calculate Net Salary**
 
-     Compute `netSalary = grossSalary - tax - pension`
-step 12. **Output Results**
+ net salary = gross salary - tax - pension
+     
+step 12. **print Results**
 
-    - Print "Employee name: " + `employeeName`
-    
-    - Print "Bonus payment: " + `bonusPayment`
-    
-    - Print "Gross salary: " + `grossSalary`
-    
-    - Print "Your net salary is: " + `netSalary`
+   employee name
+
+   gross salary
+   
+   bonus payment
+   
+   net salary
     
 step 13. **End**
 
