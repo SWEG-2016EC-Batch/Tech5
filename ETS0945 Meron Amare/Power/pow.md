@@ -1,19 +1,35 @@
-START
-  Declare variables x, y, result as double
-  Printe "Enter the value of x: "
+# Pseudocode
+
+1.START
+
+ 2. Declare variables x, y, result as double
+  
+  3.printe "Enter the value of x: "
+  
   Input x
-  IF input is invalid then
-    print "invalid input"
-    exit program
+  
+  4.IF input is invalid then
+  
+    5.print "invalid input"
+    
+    6.exit program
+    
   ENDIF
 
-  Display "Enter the value of y: "
+  7.Display "Enter the value of y: "
+  
   Input y
-  IF input is invalid Then
-    print "invalid input"
-    exit program
+  
+  8.IF input is invalid Then
+  
+    9.print "invalid input"
+    
+    10.exit program
+    
   ENDIF
 
-  calculate result = x raised to the power of y as (pow(x, y))
-  print "The result of x raised to the power of y is: result"
+  11.calculate result = x raised to the power of y as (pow(x, y))
+  
+ 12. print "The result of x raised to the power of y is: result"
+
 END
