@@ -45,36 +45,52 @@
 ## Flowchart
 
 ``` mermaid
-flowchart TD
-    A((START)) --> B[DECLARE variables: weight, height, bodyMassIndex, gender, continueInput]
-    B --> C[WHILE loop: 1 > 0]
-    C --> D[/Input weight in kg/]
-    D --> E[/Input height in meters/]
-    E --> F[/Input gender/]
-    F --> G[CHECK for valid input]
+flowchart TD  
+    A((START)) --> B[DECLARE variables: weight, height, bodyMassIndex, gender, continueInput]  
+    B --> C[WHILE loop: 1 > 0]  
+    C --> D[/Input weight in kg/]  
+    D --> E[/Input height in meters/]  
+    E --> F[/Input gender/]  
+    F --> G[CHECK for valid input]  
     
-    G -->|Valid| H[CALCULATE BMI]
-    H --> I[DISPLAY BMI and gender]
-    I --> J[DETERMINE weight level based on BMI and gender]
+    G -->|Valid| H[CALCULATE BMI]  
+    H --> I[DISPLAY BMI and gender]  
+    I --> J[DETERMINE weight level based on BMI and gender]  
     
-    J -->|BMI >= 30| K[/Display You are obese. Consult a Doctor./]
-    J -->|Gender M and BMI < 20.5| L[/Display You are underweight. Eat a balanced diet./]
-    J -->|Gender M and 20.5 <= BMI < 26| M[/Display You have a normal weight. Keep it up!/]
-    J -->|Gender M and 26 <= BMI < 30| N[/Display You are overweight. Exercise./]
-    J -->|Gender F and BMI < 18.5| O[/Display You are underweight. Eat a balanced diet./]
-    J -->|Gender F and 18.5 <= BMI < 24| P[/Display You have a normal weight. Keep it up!/]
-    J -->|Gender F and 24 <= BMI < 30| Q[/Display You are overweight. Exercise./]
-    J -->|Invalid Gender| R[/Display Invalid gender/]
+    J --> K{BMI >= 30}  
+    K -->|Yes| L[/Display You are obese. Consult a Doctor./]  
+    K -->|No| M{Gender M}  
     
-    K --> S[ASK if user wants to continue]
-    L --> S
-    M --> S
-    N --> S
-    O --> S
-    P --> S
-    Q --> S
-    R --> S
+    M -->|Yes| N{BMI < 20.5}  
+    N -->|Yes| O[/Display You are underweight. Eat a balanced diet./]  
+    N -->|No| P{20.5 <= BMI < 26}  
+    P -->|Yes| Q[/Display You have a normal weight. Keep it up!/]  
+    P -->|No| R{26 <= BMI < 30}  
+    R -->|Yes| S[/Display You are overweight. Exercise./]  
+    R -->|No| T[/Display Invalid condition./]  
     
-    S --> T[/Input continueInput/]
-    T -->|continueInput == 0| U((END))
+    M -->|No| U{Gender F}  
+    
+    U -->|Yes| V{BMI < 18.5}  
+    V -->|Yes| W[/Display You are underweight. Eat a balanced diet./]  
+    V -->|No| X{18.5 <= BMI < 24}  
+    X -->|Yes| Y[/Display You have a normal weight. Keep it up!/]  
+    X -->|No| Z{24 <= BMI < 30}  
+    Z -->|Yes| AA[/Display You are overweight. Exercise./]  
+    Z -->|No| AB[/Display Invalid condition./]  
+    
+    K --> AC[Invalid Gender]  
+    AC --> AD[/Display Invalid gender/]  
+    
+    L --> AE[ASK if user wants to continue]  
+    O --> AE  
+    Q --> AE  
+    S --> AE  
+    W --> AE  
+    Y --> AE  
+    AA --> AE  
+    AD --> AE  
+    
+    AE --> AF[/Input continueInput/]  
+    AF -->|continueInput == 0| AG((END))
     
