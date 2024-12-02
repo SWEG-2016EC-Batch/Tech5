@@ -1,44 +1,22 @@
-#include <iostream> // For numeric_limits
+#include <iostream>
+
 using namespace std;
 
-int main() {
-    // Declare variables for fuel capacity and miles per gallon
-    float fuel_capacity, mpg;
-    
-    // Ask for input: fuel tank capacity in gallons
-    cout << "Enter the fuel tank capacity in gallons: ";
-    cin>>fuel_capacity;
-    // Validate user input for fuel capacity
-    while (cin.fail()) {
-        // Clear the error state
-        cin.clear();
-        // Ignore any remaining input in the buffer
-        cin.ignore();
-        // Ask the user to re-enter a valid value
-        cout << "Invalid input. Please enter a numeric value for fuel capacity: ";
-        cin>>fuel_capacity;
-    }
+int main(){
+    int milesPerGallon, tankCapacity, mileDriven ;
 
-    // Ask for input: miles per gallon
-    cout << "Enter the miles per gallon for the automobile: ";
-    cin>>mpg;
-    // Validate user input for miles per gallon
-    while (cin.fail()) {
-        // Clear the error state
-        cin.clear();
-        // Ignore any remaining input in the buffer
-        cin.ignore();
-        
-        // Ask the user to re-enter a valid value
-        cout << "Invalid input. Please enter a numeric value for miles per gallon: ";
-        cin>>mpg;
-    }
+    cout << "Please enter the capacity of the tank"<< endl;
+    cin >> tankCapacity;
 
-    // Calculate the number of miles the car can be driven
-    float miles = fuel_capacity * mpg;
+    cout << "Please enter the miles per gallons"<< endl;
+    cin >> milesPerGallon;
 
-    // Display the result
-    cout << "The automobile can be driven " << miles << " miles consistently" << endl;
+    mileDriven = tankCapacity*milesPerGallon;
+
+    cout << " you can drive " << mileDriven<< " miles without refueling.";
 
     return 0;
 }
+    
+    
+    
