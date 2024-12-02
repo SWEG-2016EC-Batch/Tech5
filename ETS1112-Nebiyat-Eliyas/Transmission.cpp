@@ -1,23 +1,28 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
-int main(){
-    double file_size,seconds,minutes,hours;
-    int days;
-    const int transmission_rate_per_second = 960;
-    cout << "Enter the transmission file size in bytes: ";
-    cin >> file_size;
-    while (cin.fail()){
-        cin.clear();
-        cin.ignore();
-        cout << "Invalid input, please enter the file size again: " << endl;
-        cin>>file_size;
-    }
+int main (){
+double filesizeBytes,transmissionTime ;
+const double transmissionRate=960;
 
-    seconds = file_size / transmission_rate_per_second;
-    minutes = seconds / 60;
-    hours = minutes / 60;
-    
-    cout << "Time taken to send the file:"<< seconds << " seconds, " << minutes << " minutes, " << hours << " hours, and "  << endl;
-    return 0;
+cout << "please enter the file size in Bytes "<< endl;
+cin >> filesizeBytes;
+
+transmissionTime=filesizeBytes/transmissionRate;
+
+cout <<"The transmission time in seconds is: "<<transmissionTime ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
 }
