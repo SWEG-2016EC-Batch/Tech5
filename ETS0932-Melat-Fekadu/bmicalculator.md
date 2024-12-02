@@ -61,4 +61,43 @@ step3: **Begin Loop**
 step4: **End Loop**
 
 step 5: **End**
+# flow chart
+```mermaid
+flowchart TD;
+    A([Start the program]) --> B[/Declare variables: x, w, h, BMI/]
+    B --> C[Repeat the following until x is 0]
+    
+    C --> D[/Print 'Please enter your weight in kilograms'/]
+    D --> E[/Input w/]
+    E --> F[/Print 'Please enter your height in meters'/]
+    F --> G[/Input h/]
+    G --> H[Calculate BMI as w / h * h]
+    H --> I[/Print 'Your BMI = ' BMI/]
+    
+    I --> K{Is BMI < 18.5?}
+    K -->|Yes| L[/Print 'Underweight'/]
+    K -->|No| M{Is BMI <= 24.9?}
+    
+    M -->|Yes| N[/Print 'Normal weight'/]
+    M -->|No| O{Is BMI < 30?}
+    
+    O -->|Yes| P[/Print 'Overweight'/]
+    O -->|No| Q[/Print 'Obese'/]
+    
+    L --> R[/Print 'You should eat food with high calories'/]
+    N --> S[/Print 'Keep it up'/]
+    P --> T[/Print 'You should balance your diet'/]
+    Q --> U[/Print 'You should eat healthy and drink more water'/]
+    
+    R --> V[/Ask for next input: 'Enter 0 to stop or enter any number to continue'/]
+    S --> V
+    T --> V
+    U --> V
+    
+    V --> W[/Input x/]
+    W --> X{Is x != 0?}
+    
+    X -->|Yes| C
+    X -->|No| Y([End the program])
 
+```
