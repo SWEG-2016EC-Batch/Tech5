@@ -37,7 +37,7 @@ F for marks below 30
 Total mark
 
 Grade
-# pseudocode 
+# pseudocode for grade determining
 
 ## start
 
