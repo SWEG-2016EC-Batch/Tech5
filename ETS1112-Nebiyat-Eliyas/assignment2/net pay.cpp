@@ -2,9 +2,8 @@
 using namespace std;
 
 int main() {
-    // Declare variables
-    int workedhours; 
-    double basicSalary,bonusRate, grossSalary, bonus = 0.0;
+    // Declare variables 
+    double basicSalary, bonusRate, workedHours, grossSalary, bonus = 0.0;
     double pension, tax = 0.0, netSalary;
     
     // Input basic salary, worked hours, and bonus rate
