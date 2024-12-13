@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 
@@ -9,7 +10,7 @@ int main() {
     cout << "Enter a number: ";
     cin >> num;
     temp = num;
-
+    lable:
     // display the menu
     cout << "1. Reverse of the number" << endl;
     cout << "2. Number of digits" << endl;
@@ -148,7 +149,13 @@ int main() {
             cout << "Exiting..." << endl;
             break;
     }
-    
+    int continueNum;
+    cout<<"if you want continue press 1 otherwise press enter what you want"<<endl;
+    cin>>continueNum;
+    if(continueNum==1)
+       goto lable;
+       else
+       cout<<endl;
      
     return 0;
 }
