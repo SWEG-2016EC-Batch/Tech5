@@ -23,6 +23,7 @@ Tax
 Pension
 
 Net salary
+# pseudocode 
 
 ## start
 ## Step 1: Declare Variables
