@@ -23,7 +23,7 @@ Tax
 Pension
 
 Net salary
-# pseudocode 
+# pseudocode to calculate net salary
 
 ## start
 ## Step 1: Declare Variables
