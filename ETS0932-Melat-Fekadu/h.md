@@ -1,34 +1,36 @@
 ```mermaid
-flowchart TD
-    A[Start] --> B[Enter number of customers]
-    B --> C{Menu Options}
+graph TD;
+    A[Start] --> B[Display Menu];
+    B --> C{Choice?};
+    C -->|1. Reserve VIP Seat| D[Reserve Seat];
+    C -->|2. Reserve Standard Seat| D;
+    C -->|3. Display Occupancy Status| E[Display Occupancy Status];
+    C -->|4. Search Patron by Name| F[Search Patron by Name];
+    C -->|5. Exit| G[Exit];
     
-    C -->|1. Add new customer| D[Enter customer name, sex, address]
-    D --> E[Check if new customer]
-    E -->|New customer| F[Add customer to list]
-    F --> C
-    E -->|Existing customer| C
+    D --> H[Collect Patron Details];
+    H --> I{VIP Section Full?};
+    I -->|No| J[Assign VIP Seat];
+    I -->|Yes| K{Switch to Standard Section?};
+    K -->|No| L[No Seat Assigned];
+    K -->|Yes| M[Find Standard Seat];
+    M -->|Seat Found| N[Assign Standard Seat];
+    M -->|No Seat Found| O[No Seat Assigned];
     
-    C -->|2. Search for a customer| G[Enter customer ID or name]
-    G --> H[Search customer in list]
-    H -->|Found| I[Display customer details]
-    H -->|Not found| J[Display customer not found]
-    I --> C
-    J --> C
+    J --> P[Generate Ticket];
+    N --> P;
+    L --> B;
+    O --> B;
+    P --> B;
     
-    C -->|3. Record a purchase| K[Enter customer code and purchase amount]
-    K --> L[Update customer sales and purchases]
-    L --> C
+    E --> Q[Display VIP Seats];
+    Q --> R[Display Standard Seats];
+    R --> B;
     
-    C -->|4. Generate detailed report| M[Generate detailed report for each customer]
-    M --> C
-    
-    C -->|5. Generate summary report| N[Calculate total sales and items sold]
-    N --> O[Generate summary report]
-    O --> C
-    
-    C -->|6. Exit| P[End]
-    
-    C -->|Invalid choice| Q[Display invalid choice message]
-    Q --> C
+    F --> S[Search by Name];
+    S -->|Found| T[Display Patron Details];
+    S -->|Not Found| U[Patron Not Found];
+    T --> B;
+    U --> B;
+    G --> V[End];
 ```
