@@ -1,10 +1,10 @@
 ```mermaid
 graph TD;
-    A[Start] --> B[Display Menu];
+    A((Start))--> B[Display Menu];
     B --> C{Choice?};
     C -->|1. Reserve VIP Seat| D[Reserve Seat];
     C -->|2. Reserve Standard Seat| D;
-    C -->|3. Display Occupancy Status| E[Display Occupancy Status];
+    C -->|3. Display Occupancy Status| E[/Display Occupancy Status/];
     C -->|4. Search Patron by Name| F[Search Patron by Name];
     C -->|5. Exit| G[Exit];
     
@@ -23,14 +23,14 @@ graph TD;
     O --> B;
     P --> B;
     
-    E --> Q[Display VIP Seats];
-    Q --> R[Display Standard Seats];
+    E --> Q[/Display VIP Seats/];
+    Q --> R[/Display Standard Seats/];
     R --> B;
     
     F --> S[Search by Name];
-    S -->|Found| T[Display Patron Details];
-    S -->|Not Found| U[Patron Not Found];
+    S -->|Found| T[/Display Patron Details/];
+    S -->|Not Found| U[/Patron Not Found/];
     T --> B;
     U --> B;
-    G --> V[End];
+    G --> V((End));
 ```
