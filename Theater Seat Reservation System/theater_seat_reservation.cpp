@@ -1,6 +1,7 @@
 #include <iostream>  
 #include <string>  
 #include <iomanip>
+#include <algorithm> // For transform 
 using namespace std;  
 
 const int VIP_CAPACITY = 30;  
@@ -63,8 +64,14 @@ int main() {
              // Genre input with validation  
             cout << "Enter your preferred genre (Action, Comedy, Drama, Horror, Thriller): ";  
             getline(cin, genre);  
+            // Convert genre input to lowercase for case-insensitive comparison
+            transform(genre.begin(), genre.end(), genre.begin(), ::tolower);
 
-            // Input validation for age  
+            while (genre != "action" && genre != "comedy" && genre != "drama" && genre != "horror" && genre != "thriller") {
+                cout << "Invalid genre. Please enter one of the following: Action, Comedy, Drama, Horror, Thriller: ";
+                getline(cin, genre);
+                transform(genre.begin(), genre.end(), genre.begin(), ::tolower);
+            }
             cout << "Enter your age: ";  
             cin>>age;
 
