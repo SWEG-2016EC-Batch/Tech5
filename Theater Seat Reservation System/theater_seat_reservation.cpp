@@ -57,6 +57,42 @@ int main() {
                     break;  
                 }  
    }
+            // If no seats are available in the requested section  
+            if (seatNumber == -1) {  
+                char choice;  
+                cout << "The requested section is full. Would you like to be seated in the other section? (y/n): ";  
+                cin >> choice;  
+
+                // Input validation for choice  
+                while (choice != 'y' && choice != 'Y' && choice != 'n' && choice != 'N') {  
+                    cout << "Invalid input. Please enter 'y' for yes or 'n' for no: ";  
+                    cin >> choice;  
+                }  
+
+                if (choice == 'y' || choice == 'Y') {  
+                    // Switch to the other section  
+                    seatArray = (seatArray == vipSeats) ? standardSeats : vipSeats;  
+                    seatLimit = (seatArray == vipSeats) ? VIP_CAPACITY : STANDARD_CAPACITY;  
+                    offset = (seatArray == vipSeats) ? 1 : 31;  
+                    section = (seatArray == vipSeats) ? "VIP" : "Standard";  
+
+                    for (int i = 0; i < seatLimit; i++) {  
+                        if (seatArray[i] == 0) {  
+                            seatNumber = i + offset;  
+                            seatArray[i] = 1;  
+                            break;  
+                        }  
+                    }  
+
+                    if (seatNumber == -1) {  
+                        cout << "No seats available in the other section either.\n";  
+                        continue;  
+                    }  
+                } else {  
+                    cout << "No seat assigned.\n";  
+                    continue;  
+                }  
+            }  
             // Collect patron details  
             cout << "Enter your name: ";  
             cin.ignore(); // Clear the newline from previous input  
