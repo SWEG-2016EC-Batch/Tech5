@@ -1,6 +1,7 @@
 #include <iostream>  
 #include <string>  
 #include <iomanip>
+#include <limits> // For input validation 
 #include <algorithm> // For transform 
 using namespace std;  
 
@@ -27,7 +28,12 @@ int main() {
         cout << "4. Search Patron by Name\n";  
         cout << "5. Exit\n";  
         cout << "Enter your choice: ";  
-         cin>>choice;
+                 // Input validation for choice  
+        while (!(cin >> choice) || choice < 1 || choice > 5) {  
+            cout << "Invalid choice. Please enter a number between 1 and 5: ";  
+            cin.clear(); // Clear error state  
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input  
+        }  
 
         if (choice == 1 || choice == 2) {  
             string name, genre, section;  
@@ -108,8 +114,15 @@ int main() {
                 getline(cin, genre);
                 transform(genre.begin(), genre.end(), genre.begin(), ::tolower);
             }
-            cout << "Enter your age: ";  
-            cin>>age;
+                    // Input validation for choice 
+            cout << "Enter your age: ";
+        while (!(cin >> choice) || choice < 1 || choice > 5) {  
+            cout << "Invalid choice. Please enter a number between 1 and 5: ";  
+            cin.clear(); // Clear error state  
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input  
+        }  
+            
+            
 
             // Assign a unique ID  
             int uniqueID = patronCount + 1;  
