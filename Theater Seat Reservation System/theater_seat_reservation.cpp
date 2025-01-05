@@ -106,20 +106,24 @@ int main() {
             getline(cin, name);  
              // Genre input with validation  
             cout << "Enter your preferred genre (Action, Comedy, Drama, Horror, Thriller): ";  
+            getline(cin, genre);  
+
+            // Convert genre input to lowercase for case-insensitive comparison
+            transform(genre.begin(), genre.end(), genre.begin(), ::tolower);
 
             while (genre != "action" && genre != "comedy" && genre != "drama" && genre != "horror" && genre != "thriller") {
                 cout << "Invalid genre. Please enter one of the following: Action, Comedy, Drama, Horror, Thriller: ";
                 getline(cin, genre);
-                transform(genre.begin(), genre.end(), genre.begin(), ::tolower);// Convert genre input to lowercase for case-insensitive comparison
+                transform(genre.begin(), genre.end(), genre.begin(), ::tolower);
             }
                     // Input validation for choice 
             cout << "Enter your age: ";
-        while (!(cin >> choice) || choice < 1 || choice > 5) {  
-            cout << "Invalid choice. Please enter a number between 1 and 5: ";  
-            cin.clear(); // Clear error state  
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input  
-        }  
-            
+        while (!(cin >> age) || age < 0 || age > 120) {  
+                cout << "Invalid age. Please enter a valid age (0-120): ";  
+                cin.clear(); // Clear error state  
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input  
+            }  
+
             
 
             // Assign a unique ID  
