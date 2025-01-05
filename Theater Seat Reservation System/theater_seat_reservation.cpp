@@ -1,6 +1,7 @@
 #include <iostream>  
 #include <string>  
 #include <iomanip>
+#include <unistd.h>
 #include <limits> // For input validation 
 #include <algorithm> // For transform 
 using namespace std;  
@@ -20,7 +21,7 @@ int patronCount = 0;
 int main() {  
     int choice;  
     do {  
-        
+        system("clear");  
         cout << "\n--- Theater Seat Reservation System ---\n";  
         cout << "1. Reserve VIP Seat\n";  
         cout << "2. Reserve Standard Seat\n";  
@@ -143,9 +144,10 @@ int main() {
             cout << "Genre: " << genre << endl;  
             cout << "Section: " << section << endl;  
             cout << "Seat Number: " << seatNumber << endl;  
-            cout << "Unique ID: " << uniqueID << endl;  
+            cout << "Unique ID: " << uniqueID << endl; 
+            sleep(10);
 
-        } else if (choice == 3) {  
+     } else if (choice == 3) {  
             cout << "\n--- Current Seat Occupancy ---\n";  
             cout << "VIP Seats: \n";  
             for (int i = 0; i < VIP_CAPACITY; i++) {  
@@ -156,7 +158,7 @@ int main() {
             for (int i = 0; i < STANDARD_CAPACITY; i++) {  
                 cout << "Seat " << i + 31 << ": " << (standardSeats[i] ? "Occupied" : "Available") << endl;  
             } 
-            
+       sleep(10);  
         } else if (choice == 4) {  
             string searchName;  
             cout << "Enter the name of the patron to search: ";  
@@ -181,6 +183,7 @@ int main() {
             if (!found) {  
                 cout << "No patron found with the name " << searchName << ".\n";  
             } 
+            sleep(10);
         } else if (choice == 5) {  
             cout << "Exiting the system. Goodbye!\n";  
         }  
