@@ -167,17 +167,17 @@ int main() {
             getline(cin, searchName);  
 
             bool found = false;  
+             cout << "\n--- Patron Details ---\n";  
             for (int i = 0; i < patronCount; i++) {  
                 if (patrons[i][0] == searchName) {  
                     found = true;  
-                    cout << "\n--- Patron Details ---\n";  
                     cout << "Name: " << patrons[i][0] << endl;  
                     cout << "Age: " << patrons[i][2] << endl;  
                     cout << "Genre: " << patrons[i][1] << endl;  
                     cout << "Section: " << patrons[i][4] << endl;  
                     cout << "Seat Number: " << patronSeatNumbers[i] << endl;  
                     cout << "Unique ID: " << patrons[i][3] << endl;  
-                    break;  
+                     
                 }  
             }  
 
