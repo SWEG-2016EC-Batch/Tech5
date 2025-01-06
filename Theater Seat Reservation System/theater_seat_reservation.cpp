@@ -21,7 +21,12 @@ int patronCount = 0;
 int main() {  
     int choice;  
     do {  
-        system("clear");  
+        system("clear");
+         cout << "\n--- Welcome to Tech 5 Theater ---\n";  
+         cout << "Thank you for choosing us for your entertainment!\n";  
+         cout << "We are excited to offer you a fantastic experience with our VIP and Standard seating options.\n";  
+         cout << "Enjoy your movie, and let us know if you need any assistance!\n";  
+         cout << "---------------------------------------------------\n";
         cout << "\n--- Theater Seat Reservation System ---\n";  
         cout << "1. Reserve VIP Seat\n";  
         cout << "2. Reserve Standard Seat\n";  
