@@ -177,6 +177,7 @@ int main() {
                     cout << "Section: " << patrons[i][4] << endl;  
                     cout << "Seat Number: " << patronSeatNumbers[i] << endl;  
                     cout << "Unique ID: " << patrons[i][3] << endl;  
+                    cout << "-------------------\n";
                      
                 }  
             }  
